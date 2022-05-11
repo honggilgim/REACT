@@ -1,0 +1,17 @@
+.listTable{
+  width: 62vw;
+  
+  .contentsBox{
+    height: 90vh;
+    overflow: scroll;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar { 
+      display: none;
+  }
+  }
+
+  div{
+    height: 100px;
+  }
+}
