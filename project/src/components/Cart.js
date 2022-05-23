@@ -57,8 +57,9 @@ export default function Cart(props){
       // 결제창이 닫힐때 수행됩니다. (성공,실패,취소에 상관없이 모두 수행됨)
       console.log(data);
     }).done(function (data) {
-      //결제가 정상적으로 완료되면 수행됩니다
-      //비즈니스 로직을 수행하기 전에 결제 유효성 검증을 하시길 추천합니다.
+      // 결제 성공시 qr 코드 생성
+      
+
       console.log(data);
     });
   }

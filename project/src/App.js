@@ -1,4 +1,5 @@
 import './styles/App.scss';
+import Router from './components/Router';
 import Header from './components/Header.js';
 import Cart from './components/Cart';
 import Nav from './components/Nav';
@@ -17,6 +18,8 @@ export default function App() {
         <Nav></Nav>
         <ListTable pick={pick} setPick={setPick} fee={fee} setFee={setFee} pay={pay} setPay={setPay}></ListTable>
         <Cart pick={pick} setPick={setPick} fee={fee} setFee={setFee} pay={pay} setPay={setPay}></Cart>
+        <Router></Router>
+
       </main>
     </div>
   );
