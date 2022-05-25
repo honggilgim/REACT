@@ -5,6 +5,7 @@ import Cart from './components/Cart';
 import Nav from './components/Nav';
 import ListTable from './components/ListTable';
 import { useState } from 'react';
+import Qrcode from './components/Qrcode'
 
 export default function App() {
   let [pick, setPick] = useState([]);
@@ -18,7 +19,7 @@ export default function App() {
         <Nav></Nav>
         <ListTable pick={pick} setPick={setPick} fee={fee} setFee={setFee} pay={pay} setPay={setPay}></ListTable>
         <Cart pick={pick} setPick={setPick} fee={fee} setFee={setFee} pay={pay} setPay={setPay}></Cart>
-        <Router></Router>
+        <Qrcode></Qrcode>
 
       </main>
     </div>

@@ -2,6 +2,9 @@ import '../styles/Cart.scss';
 import { useState } from 'react';
 import CartContent from './CartContent';
 import BootPay from "bootpay-js"
+import {QRCodeSVG} from "qrcode.react";
+import "../styles/Qr.scss";
+
 
 export default function Cart(props){
 
@@ -58,10 +61,21 @@ export default function Cart(props){
       console.log(data);
     }).done(function (data) {
       // 결제 성공시 qr 코드 생성
-      
+      Qr('sss')
 
       console.log(data);
     });
+  }
+
+  function Qr(name) {
+      return (
+        <div className="App">
+          <h1>티켓</h1>
+          <div>
+            <QRCodeSVG value={name} />,
+          </div>
+        </div>
+      );
   }
 
   return(

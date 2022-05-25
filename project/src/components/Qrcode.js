@@ -1,26 +1,15 @@
 import React from "react";
-import { render } from "react-dom";
-import QRCode from "qrcode.react";
+import {QRCodeSVG} from "qrcode.react";
 
-import "./styles.css";
+import "../styles/Qr.scss";
 
-function Qr_code() {
+export default function Qr_code() {
   return (
     <div className="App">
-      <h1>Hello QR</h1>
+      <h1>티켓</h1>
       <div>
-        <QRCode
-          value="https://p3d.in"
-          renderAs="svg"
-          style={{
-            width: "80vmin",
-            height: "80vmin"
-          }}
-        />
+        <QRCodeSVG value="ticket : 김홍길, 홍길, 홍길" />,
       </div>
     </div>
   );
 }
-
-const rootElement = document.getElementById("root");
-render(<Qr_code />, rootElement);
